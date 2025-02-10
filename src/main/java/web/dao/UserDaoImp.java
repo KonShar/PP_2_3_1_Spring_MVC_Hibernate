@@ -9,14 +9,12 @@ import javax.persistence.PersistenceContext;
 import java.util.List;
 
 @Repository
-@Transactional
 public class UserDaoImp implements UserDao {
 
     @PersistenceContext
     private EntityManager entityManager ;
 
     @Override
-    @Transactional(readOnly = true)
     public List<User> getAllUsers() {
         return entityManager.createQuery("FROM User", User.class).getResultList();
     }
