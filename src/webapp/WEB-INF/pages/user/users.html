@@ -21,7 +21,7 @@
         <td th:text="${user.getAge()}"></td>
         <td>
             <a th:href="@{/users/update/(id=${user.getId()})}">Edit</a>
-            <a th:href="@{/users/delete/(id=${user.getId()})}">Delete</a>
+<!--            <form th:metod="POST" th:action="@{/users/delete/(id=${user.getId()})}">Delete</form>-->
         </td>
     </tr>
     </tbody>
